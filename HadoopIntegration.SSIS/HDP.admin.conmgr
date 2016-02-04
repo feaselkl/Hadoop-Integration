@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="HDP.admin"
+  DTS:DTSID="{D97FB3DD-5F7C-40BB-8AF1-0A7F05A32893}"
+  DTS:CreationName="ODBC">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="uid=admin;Dsn=HDP;">
+      <DTS:Password
+        DTS:Name="pwd"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAz2BXGEwYT0Osz6Ip26/6tQAAAAACAAAAAAAQZgAAAAEAACAAAAAzTlA9In87AkUcjCG0pfl6PYZuS5r0Egqdgdra4NfB/wAAAAAOgAAAAAIAACAAAABTcY6DT/lMttb3UcnQ2cHW1earEBxslnZS9rEI6fDGCZAAAABKFatCiZHesmlrTxkBbe4Ccnwjpx/3dY5DJagGkbgMAZZ3s4DM2mgoBRWuVRWSGw5EmWctVY1A9NLHjdf16TIvelulKtgj7G7vixQARcrcG8s6ECOvd0P2TrSU4tdwiM4AEaKGFR2G5pV5zrCMSaFH8JakFLCJb4Agef+CRDQUv8qpgq5JdxJooJIJBABg95VAAAAAYSfP/X9xXjgpgamv3lRjqVgKsYObHoGT6qdMUw3k7ZRDNoeGDHVqBpPwCkldn8BxJkBPeH0Y2Yd+Qt/CXCnAtw==</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

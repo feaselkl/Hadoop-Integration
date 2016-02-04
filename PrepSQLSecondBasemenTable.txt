@@ -1,0 +1,13 @@
+USE AdventureWorks2016CTP3
+GO
+DROP TABLE IF EXISTS Production.SecondBasemen;
+CREATE TABLE Production.SecondBasemen
+(
+	FirstName VARCHAR(50),
+	LastName VARCHAR(50),
+	Age INT,
+	Bats VARCHAR(5),
+	Throws VARCHAR(5)
+);
+
+SELECT * from Production.SecondBasemen;

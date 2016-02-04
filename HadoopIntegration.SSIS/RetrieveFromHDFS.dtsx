@@ -1,0 +1,224 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/25/2016 11:03:21 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-BFJ1BGV"
+  DTS:CreatorName="DESKTOP-BFJ1BGV\Kevin Feasel"
+  DTS:DTSID="{D20CB283-0646-47C8-AB6C-192B663DF5A8}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="13.0.900.80"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="RetrieveFromHDFS"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{C38C00C4-BD6C-4F90-9D2F-E76ED6C89FEC}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{C55559CE-7580-410E-AA39-AFCE19BD69CE}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RowCount">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{1B748A4E-8CB0-469A-9F63-E453FDA85FF6}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\HDFS File Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="MicrosoftContactInfo"
+              description="Extracts data from a file in HDFS. The supported file formats are: Text, Avro."
+              name="HDFS File Source"
+              usesDispositions="true">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of HDFS file"
+                  expressionType="Notify"
+                  name="FilePath">/tmp/ootp/pitchingratings/PitchingRatings.csv</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Column names in the first data row"
+                  expressionType="Notify"
+                  name="FirstRowAsColumnNames">false</property>
+                <property
+                  dataType="System.String"
+                  description="The character used to delimit columns in text file"
+                  name="ColumnDelimiter">,</property>
+                <property
+                  dataType="System.Int32"
+                  description="The character used to delimit columns in text file"
+                  name="FileFormat">0</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">HdfsSource</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\HDFS File Source.Connections[Hadoop Connection Manager]"
+                  connectionManagerID="{9FB13F70-E6BC-4018-A948-20349829C881}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Hadoop Connection Manager]"
+                  description="It's used to connect Hadoop cluster"
+                  name="Hadoop Connection Manager" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\HDFS File Source.Outputs[Output]"
+                  name="Output">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output]"
+                  isErrorOut="true"
+                  name="Error output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Row Count"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="Row Count">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::RowCount</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Row Count.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Row Count.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\Data Flow Task\Row Count.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[Output]"
+              endId="Package\Data Flow Task\Row Count.Inputs[Row Count Input 1]"
+              name="Output"
+              startId="Package\Data Flow Task\HDFS File Source.Outputs[Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Data Flow Task"
+          TopLeft="239.428575506016,141.31764904075" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\Data Flow Task\Row Count"
+          TopLeft="284.571433417651,179.858826051864" />
+        <NodeLayout
+          Size="159.2,41.6"
+          Id="Package\Data Flow Task\HDFS File Source"
+          TopLeft="262.857147333573,55.6705890160531" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output]"
+          TopLeft="345.914290375612,97.2705890160531">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,82.5882370358108"
+              Start="0,0"
+              End="0,75.0882370358108">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,75.0882370358108" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="As of 2016-01-30, the HDFS&#xD;&#xA;File Source does not retrieve&#xD;&#xA;any list of columns, nor are&#xD;&#xA;you able to populate a set&#xD;&#xA;of columns.  As such, this&#xD;&#xA;HDFS File Source is currently&#xD;&#xA;non-functional."
+          ParentId="Package\Data Flow Task"
+          FontInfo="{assembly:Null}"
+          Size="180,136"
+          Id="91dae777-d4b6-4c8e-ae45-a52678987cc8"
+          TopLeft="62.8571439275937,59.3411773028258" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\HDFS File Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

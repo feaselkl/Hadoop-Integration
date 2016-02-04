@@ -1,0 +1,7 @@
+--From the hive query prompt, it looks like you need this folder in HDFS even though it
+--will write locally.  If you get a write error, try creating a /tmp/ootpoutput folder
+--in HDFS.
+INSERT OVERWRITE LOCAL DIRECTORY '/tmp/ootpoutput/' 
+ROW FORMAT DELIMITED 
+FIELDS TERMINATED BY ',' 
+SELECT FirstName, LastName, Age, Bats, Throws FROM BattingRatingsPerm WHERE Position = 'RF';

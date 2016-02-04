@@ -1,0 +1,348 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/25/2016 10:48:08 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-BFJ1BGV"
+  DTS:CreatorName="DESKTOP-BFJ1BGV\Kevin Feasel"
+  DTS:DTSID="{8EF16A5D-F268-4098-846D-87757EEAF30E}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="13.0.900.80"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="RetrieveFromHive"
+  DTS:PackageType="5"
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{6B1104FA-81F9-42C7-B1E8-D0733F07720D}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[HDP.admin 1]"
+      DTS:CreationName="ADO.NET:System.Data.Odbc.OdbcConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{D3F01051-7DD5-4362-B1C6-499E0DEEDD00}"
+      DTS:ObjectName="HDP.admin 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="uid=admin;Dsn=HDP;">
+          <DTS:Password
+            DTS:Name="pwd"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAz2BXGEwYT0Osz6Ip26/6tQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADPCgeTfFJxg6K9G3B3/Ej+r7sVMvQN/O990wM91l3HZgAAAAAOgAAAAAIAACAAAADd9fezyhT7x4RJ4SjhtCGXt8xmxVPo6e3xN0aB5sMzr0AAAADLXq731gtAlFDUSDHS3zsH4KDG6ct4HsSo7k4/GjtMGt9dOsli+NiFrStGtq8xIAzxOulGFiOcGV7iWKYmArVFQAAAANSq0U3sxTZCheT328ge/sUq8ydoFwYQojT10bHyiAj8qbDjxKlxybwxceMALsNO6Qw5iRFg2/egOqQddsYMCvU</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{965C1536-DA57-4B54-A78B-2FA421FCB977}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="RowCount">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{792B4BC6-8BB2-4AAE-AD77-A3CF0F6FF694}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task\Row Count"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="Row Count">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::RowCount</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Row Count.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Row Count.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\Data Flow Task\Row Count.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\SecondBasemen"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="Consumes data from SQL Server, OLE DB, ODBC, or Oracle, using the corresponding .NET Framework data provider. Use a Transact-SQL statement to define the result set. For example, extract data from SQL Server with the .NET Framework data provider for SQL Server."
+              name="SecondBasemen"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement used by the component to extract data."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether to allow non-string external columns to be implicitly converted to strings at the output columns."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="The Source database table name."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"default"."secondbasemen"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the mode to retrieve external column information"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">0</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\SecondBasemen.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[HDP.admin 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[HDP.admin 1]"
+                  description="Managed connection manager"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output]"
+                  name="ADO NET Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].Columns[firstname]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].ExternalColumns[firstname]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].Columns[firstname]"
+                      name="firstname"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].Columns[lastname]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].ExternalColumns[lastname]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].Columns[lastname]"
+                      name="lastname"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].Columns[age]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].ExternalColumns[age]"
+                      lineageId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].Columns[age]"
+                      name="age"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].Columns[bats]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].ExternalColumns[bats]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].Columns[bats]"
+                      name="bats"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].Columns[throws]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].ExternalColumns[throws]"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].Columns[throws]"
+                      name="throws"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].ExternalColumns[firstname]"
+                      dataType="wstr"
+                      length="4000"
+                      name="firstname" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].ExternalColumns[lastname]"
+                      dataType="wstr"
+                      length="4000"
+                      name="lastname" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].ExternalColumns[age]"
+                      dataType="i4"
+                      name="age" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].ExternalColumns[bats]"
+                      dataType="wstr"
+                      length="4000"
+                      name="bats" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].ExternalColumns[throws]"
+                      dataType="wstr"
+                      length="4000"
+                      name="throws" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Error Output]"
+                  isErrorOut="true"
+                  name="ADO NET Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Error Output].Columns[firstname]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Error Output].Columns[firstname]"
+                      name="firstname" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Error Output].Columns[lastname]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Error Output].Columns[lastname]"
+                      name="lastname" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Error Output].Columns[age]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Error Output].Columns[age]"
+                      name="age" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Error Output].Columns[bats]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Error Output].Columns[bats]"
+                      name="bats" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Error Output].Columns[throws]"
+                      dataType="wstr"
+                      length="4000"
+                      lineageId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Error Output].Columns[throws]"
+                      name="throws" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task.Paths[ADO NET Source Output]"
+              endId="Package\Data Flow Task\Row Count.Inputs[Row Count Input 1]"
+              name="ADO NET Source Output"
+              startId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Data Flow Task"
+          TopLeft="324.571434098847,191.482355626644" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\Data Flow Task\SecondBasemen"
+          TopLeft="246.857147061095,137.647060753977" />
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\Data Flow Task\Row Count"
+          TopLeft="266.285718820533,235.529415067917" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[ADO NET Source Output]"
+          TopLeft="327.771432940814,179.247060753977">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,56.2823543139395"
+              Start="0,0"
+              End="0,48.7823543139395">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.7823543139395" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\SecondBasemen">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

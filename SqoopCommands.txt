@@ -1,0 +1,100 @@
+###		sqoop Commands
+###		My SQL Server instance is at 192.168.172.131; yours will probably be different.
+
+# List all databases on the SQL Server instance.
+sqoop list-databases --connect jdbc:sqlserver://192.168.172.131:1433 --username hadoopintegration -P
+
+# List all tables in a particular database.  For SQL Server, if you do not specify a schema, sqoop will
+# only pull results from the default schema.  For our hadoopintegration login, the default schema is dbo.
+# Note that the line-ending \ indicates that our command should continue on the next line.
+sqoop list-tables --connect 'jdbc:sqlserver://192.168.172.131:1433;database=AdventureWorks2016CTP3' \
+--username hadoopintegration -P
+
+# Specify a schema.  Schema is special to SQL Server, so we need to put it at the very end, after a -- combo.	
+sqoop list-tables --connect 'jdbc:sqlserver://192.168.172.131:1433;database=AdventureWorks2016CTP3' \
+--username hadoopintegration -P \
+-- --schema Production
+
+# Load a table into Hive.
+# Sqoop needs read & write permissions to /user/[username] to load the temp file.
+# Hive will delete our file afterward, as we did not specify an external table.
+sqoop import --connect 'jdbc:sqlserver://192.168.172.131:1433;database=AdventureWorks2016CTP3' \
+--username hadoopintegration -P \
+--table ProductSubcategory \
+--hive-import \
+-- --schema Production
+
+# Import a table without loading into Hive.
+# The directory /user/[username]/ProductSubcategory must NOT exist already, or else you'll get an error!
+sqoop import --connect 'jdbc:sqlserver://192.168.172.131:1433;database=AdventureWorks2016CTP3' \
+--username hadoopintegration -P \
+--table ProductSubcategory -- --schema Production
+
+# Importing data from a SQL Server view.
+# This will cause an error!  To distribute load across nodes, Sqoop expects that if you're loading into Hive, one of the three is true:
+#	1) Your table has a primary key (accessable from SQL Server metadata)
+#	2) You specify a "split-by" value and tell Sqoop the unique key
+#	3) You set "-m 1" to force a sequential load (so only one node can work on this query).
+sqoop import --connect 'jdbc:sqlserver://192.168.172.131:1433;database=AdventureWorks2016CTP3' \
+--username hadoopintegration -P \
+--table vProductAndDescription \
+--hive-import \
+-- --schema Production
+
+# Specify a value; in our case, we know ProductID is unique.
+sqoop import --connect 'jdbc:sqlserver://192.168.172.131:1433;database=AdventureWorks2016CTP3' \
+--username hadoopintegration -P \
+--table vProductAndDescription \
+--split-by ProductID \
+--hive-import \
+-- --schema Production
+
+# Typing in your password every time works in a demo, but not so much for production.
+# Let's create a password file.  This file is in HDFS, NOT the local filesystem!
+# Steps:
+	# echo -n "mypassword" > .password
+	# hadoop dfs -put .password hdfs:/user/[username]/sqoop.pwd
+	# Be sure to chmod 400 this file in HDFS!  In other words, user read and nothing else.  That will limit exposure to this file.
+sqoop import --connect 'jdbc:sqlserver://192.168.172.131:1433;database=AdventureWorks2016CTP3' \
+--username hadoopintegration \
+--password-file /user/root/sqoop.pwd \
+--table vProductAndDescription \
+--split-by ProductID \
+--hive-import \
+-- --schema Production
+	
+# Even better, let's use a key credential store.
+# Steps:
+	# hadoop credential delete sql2016.password -provider jceks://hdfs/user/root/sql2016.jceks		# Delete an existing password
+	# hadoop credential create sql2016.password -provider jceks://hdfs/user/root/sql2016.jceks
+sqoop import -Dhadoop.security.credential.provider.path=jceks://hdfs/user/root/sql2016.jceks \
+--connect 'jdbc:sqlserver://192.168.172.131:1433;database=AdventureWorks2016CTP3' \
+--username hadoopintegration --password-alias sql2016.password \
+--table vProductAndDescription \
+--split-by ProductID \
+--hive-import \
+-- --schema Production
+
+# Sqoop can also let you specify columns and a where clause.
+# You can also use the --query tag instead of --columns & --where to create a SIMPLE query.
+# As of Sqoop 1.4.6, the tool cannot handle OR clauses or subqueries.
+sqoop import -Dhadoop.security.credential.provider.path=jceks://hdfs/user/root/sql2016.jceks \
+--connect 'jdbc:sqlserver://192.168.172.131:1433;database=AdventureWorks2016CTP3' \
+--username hadoopintegration --password-alias sql2016.password \
+--table vProductAndDescription \
+--split-by ProductID \
+--columns "ProductID,Name,Description" \
+--where "CultureID = 'en'" \
+--hive-import \
+--hive-overwrite \
+-- --schema Production
+
+# Load an existing SQL Server table.  As of Sqoop 1.4.6, you can NOT create a new SQL Server table.
+# You can use --update-key to perform updates instead of straight insertions, but this is best used for staging table migration.
+sqoop export -Dhadoop.security.credential.provider.path=jceks://hdfs/user/root/sql2016.jceks \
+--connect 'jdbc:sqlserver://192.168.172.131:1433;database=AdventureWorks2016CTP3' \
+--username hadoopintegration --password-alias sql2016.password \
+--table SecondBasemen \
+--export-dir /apps/hive/warehouse/secondbasemen \
+--input-fields-terminated-by "\001" \
+-- --schema Production

@@ -1,0 +1,2 @@
+CREATE TABLE IF NOT EXISTS SecondBasemen AS
+SELECT FirstName, LastName, Age, Bats, Throws FROM BattingRatingsPerm WHERE Position = '2B';

@@ -1,0 +1,76 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HDFSFileManagement.FSharp", "HDFSFileManagement.FSharp\HDFSFileManagement.FSharp.fsproj", "{B82A3A67-9B54-43B5-91E9-A89F76FF12B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HadoopIntegration", "HadoopIntegration", "{49EA7132-66EB-41F5-9542-D7C427195D2F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Ambari", "1 - Ambari", "{8F486480-4B7F-4995-8446-6BB821BA892A}"
+	ProjectSection(SolutionItems) = preProject
+		CreateBattingRatings.txt = CreateBattingRatings.txt
+		CreateBattingRatingsPerm.txt = CreateBattingRatingsPerm.txt
+		WriteOutRightFielders.txt = WriteOutRightFielders.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Sqoop", "2 - Sqoop", "{B4834828-61D3-4832-AB89-40D857C3A986}"
+	ProjectSection(SolutionItems) = preProject
+		PrepHiveSecondBasemenTable.txt = PrepHiveSecondBasemenTable.txt
+		PrepSQLSecondBasemenTable.txt = PrepSQLSecondBasemenTable.txt
+		SqoopCommands.txt = SqoopCommands.txt
+	EndProjectSection
+EndProject
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "HadoopIntegration.SSIS", "HadoopIntegration.SSIS\HadoopIntegration.SSIS.dtproj", "{BE3EDBAA-3D78-42A5-BB73-26F18DC72F83}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Hive Linked Server", "5 - Hive Linked Server", "{38ED7268-C1A0-41B7-8F85-CA31CC6A5AD8}"
+	ProjectSection(SolutionItems) = preProject
+		CreateHiveLinkedServer.sql = CreateHiveLinkedServer.sql
+		QueryHiveLinkedServer.sql = QueryHiveLinkedServer.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6 - Polybase", "6 - Polybase", "{6DE0335E-9BCA-4A38-B851-B08645E1E138}"
+	ProjectSection(SolutionItems) = preProject
+		CreatePolybaseTable.sql = CreatePolybaseTable.sql
+		PolybasePredicatePushdown.sql = PolybasePredicatePushdown.sql
+		PolybaseStatistics.sql = PolybaseStatistics.sql
+		PolybaseTuning.sql = PolybaseTuning.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{66EF3FBE-AEA5-43E4-A264-FDF6D9F8CAF8}"
+	ProjectSection(SolutionItems) = preProject
+		Files\BattingRatings.csv = Files\BattingRatings.csv
+		Files\PitchingRatings.csv = Files\PitchingRatings.csv
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Development|Any CPU = Development|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B82A3A67-9B54-43B5-91E9-A89F76FF12B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B82A3A67-9B54-43B5-91E9-A89F76FF12B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B82A3A67-9B54-43B5-91E9-A89F76FF12B0}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{B82A3A67-9B54-43B5-91E9-A89F76FF12B0}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{B82A3A67-9B54-43B5-91E9-A89F76FF12B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B82A3A67-9B54-43B5-91E9-A89F76FF12B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE3EDBAA-3D78-42A5-BB73-26F18DC72F83}.Debug|Any CPU.ActiveCfg = Development
+		{BE3EDBAA-3D78-42A5-BB73-26F18DC72F83}.Debug|Any CPU.Build.0 = Development
+		{BE3EDBAA-3D78-42A5-BB73-26F18DC72F83}.Development|Any CPU.ActiveCfg = Development
+		{BE3EDBAA-3D78-42A5-BB73-26F18DC72F83}.Development|Any CPU.Build.0 = Development
+		{BE3EDBAA-3D78-42A5-BB73-26F18DC72F83}.Release|Any CPU.ActiveCfg = Development
+		{BE3EDBAA-3D78-42A5-BB73-26F18DC72F83}.Release|Any CPU.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8F486480-4B7F-4995-8446-6BB821BA892A} = {49EA7132-66EB-41F5-9542-D7C427195D2F}
+		{B4834828-61D3-4832-AB89-40D857C3A986} = {49EA7132-66EB-41F5-9542-D7C427195D2F}
+		{38ED7268-C1A0-41B7-8F85-CA31CC6A5AD8} = {49EA7132-66EB-41F5-9542-D7C427195D2F}
+		{6DE0335E-9BCA-4A38-B851-B08645E1E138} = {49EA7132-66EB-41F5-9542-D7C427195D2F}
+		{66EF3FBE-AEA5-43E4-A264-FDF6D9F8CAF8} = {49EA7132-66EB-41F5-9542-D7C427195D2F}
+	EndGlobalSection
+EndGlobal
