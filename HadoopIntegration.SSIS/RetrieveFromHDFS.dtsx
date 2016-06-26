@@ -7,12 +7,13 @@
   DTS:CreatorName="DESKTOP-BFJ1BGV\Kevin Feasel"
   DTS:DTSID="{D20CB283-0646-47C8-AB6C-192B663DF5A8}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="13.0.1000.281"
+  DTS:LastModifiedProductVersion="13.0.1601.5"
   DTS:LocaleID="1033"
   DTS:ObjectName="RetrieveFromHDFS"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{A0F36B8A-25BB-4989-8A86-0F6A375211D4}">
+  DTS:ProtectionLevel="2"
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{B049EFB0-C226-4322-B459-53E637A80787}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -56,27 +57,32 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Prop_0]"
-                      cachedDataType="nText"
+                      cachedDataType="wstr"
+                      cachedLength="100"
                       cachedName="Prop_0"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_0]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Prop_1]"
-                      cachedDataType="nText"
+                      cachedDataType="wstr"
+                      cachedLength="100"
                       cachedName="Prop_1"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_1]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Prop_2]"
-                      cachedDataType="nText"
+                      cachedDataType="wstr"
+                      cachedLength="100"
                       cachedName="Prop_2"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_2]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Prop_3]"
-                      cachedDataType="nText"
+                      cachedDataType="wstr"
+                      cachedLength="100"
                       cachedName="Prop_3"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_3]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input].Columns[Prop_4]"
-                      cachedDataType="nText"
+                      cachedDataType="wstr"
+                      cachedLength="100"
                       cachedName="Prop_4"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_4]" />
                   </inputColumns>
@@ -246,7 +252,7 @@
                   dataType="System.String"
                   description="The name of HDFS file"
                   expressionType="Notify"
-                  name="FilePath">/tmp/ootp/pitchingratings/PitchingRatings.csv</property>
+                  name="FilePath">/tmp/ootp/PitchingRatings.csv</property>
                 <property
                   dataType="System.Boolean"
                   description="Column names in the first data row"
@@ -279,550 +285,611 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_0]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_0]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_0]"
                       name="Prop_0"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_1]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_1]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_1]"
                       name="Prop_1"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_2]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_2]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_2]"
                       name="Prop_2"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_3]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_3]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_3]"
                       name="Prop_3"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_4]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_4]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_4]"
                       name="Prop_4"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_5]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_5]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_5]"
                       name="Prop_5"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_6]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_6]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_6]"
                       name="Prop_6"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_7]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_7]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_7]"
                       name="Prop_7"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_8]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_8]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_8]"
                       name="Prop_8"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_9]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_9]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_9]"
                       name="Prop_9"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_10]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_10]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_10]"
                       name="Prop_10"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_11]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_11]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_11]"
                       name="Prop_11"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_12]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_12]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_12]"
                       name="Prop_12"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_13]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_13]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_13]"
                       name="Prop_13"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_14]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_14]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_14]"
                       name="Prop_14"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_15]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_15]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_15]"
                       name="Prop_15"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_16]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_16]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_16]"
                       name="Prop_16"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_17]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_17]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_17]"
                       name="Prop_17"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_18]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_18]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_18]"
                       name="Prop_18"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_19]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_19]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_19]"
                       name="Prop_19"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_20]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_20]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_20]"
                       name="Prop_20"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_21]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_21]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_21]"
                       name="Prop_21"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_22]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_22]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_22]"
                       name="Prop_22"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_23]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_23]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_23]"
                       name="Prop_23"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_24]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_24]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_24]"
                       name="Prop_24"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_25]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_25]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_25]"
                       name="Prop_25"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_26]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_26]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_26]"
                       name="Prop_26"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_27]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_27]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_27]"
                       name="Prop_27"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_28]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_28]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_28]"
                       name="Prop_28"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_29]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_29]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_29]"
                       name="Prop_29"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_30]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_30]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_30]"
                       name="Prop_30"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_31]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_31]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_31]"
                       name="Prop_31"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_32]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_32]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_32]"
                       name="Prop_32"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_33]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_33]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_33]"
                       name="Prop_33"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_34]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_34]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_34]"
                       name="Prop_34"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_35]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_35]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_35]"
                       name="Prop_35"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_36]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_36]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_36]"
                       name="Prop_36"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_37]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_37]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_37]"
                       name="Prop_37"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_38]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_38]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_38]"
                       name="Prop_38"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_39]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_39]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_39]"
                       name="Prop_39"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_40]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_40]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_40]"
                       name="Prop_40"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_41]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_41]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_41]"
                       name="Prop_41"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_42]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_42]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_42]"
                       name="Prop_42"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_43]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_43]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_43]"
                       name="Prop_43"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_44]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_44]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_44]"
                       name="Prop_44"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_45]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_45]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_45]"
                       name="Prop_45"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_46]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_46]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_46]"
                       name="Prop_46"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_47]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_47]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_47]"
                       name="Prop_47"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_48]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_48]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_48]"
                       name="Prop_48"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_49]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_49]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_49]"
                       name="Prop_49"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_50]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_50]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_50]"
                       name="Prop_50"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_51]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_51]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_51]"
                       name="Prop_51"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_52]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_52]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_52]"
                       name="Prop_52"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_53]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_53]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_53]"
                       name="Prop_53"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_54]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_54]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_54]"
                       name="Prop_54"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_55]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_55]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_55]"
                       name="Prop_55"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_56]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_56]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_56]"
                       name="Prop_56"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_57]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_57]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_57]"
                       name="Prop_57"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_58]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_58]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_58]"
                       name="Prop_58"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_59]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_59]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_59]"
                       name="Prop_59"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_60]"
-                      dataType="nText"
+                      dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_60]"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Output].Columns[Prop_60]"
                       name="Prop_60"
                       truncationRowDisposition="FailComponent" />
@@ -830,247 +897,308 @@
                   <externalMetadataColumns>
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_0]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_0" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_1]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_1" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_2]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_2" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_3]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_3" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_4]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_4" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_5]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_5" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_6]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_6" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_7]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_7" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_8]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_8" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_9]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_9" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_10]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_10" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_11]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_11" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_12]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_12" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_13]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_13" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_14]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_14" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_15]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_15" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_16]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_16" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_17]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_17" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_18]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_18" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_19]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_19" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_20]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_20" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_21]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_21" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_22]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_22" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_23]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_23" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_24]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_24" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_25]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_25" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_26]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_26" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_27]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_27" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_28]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_28" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_29]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_29" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_30]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_30" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_31]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_31" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_32]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_32" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_33]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_33" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_34]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_34" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_35]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_35" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_36]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_36" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_37]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_37" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_38]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_38" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_39]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_39" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_40]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_40" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_41]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_41" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_42]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_42" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_43]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_43" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_44]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_44" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_45]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_45" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_46]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_46" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_47]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_47" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_48]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_48" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_49]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_49" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_50]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_50" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_51]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_51" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_52]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_52" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_53]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_53" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_54]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_54" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_55]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_55" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_56]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_56" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_57]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_57" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_58]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_58" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_59]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_59" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Output].ExternalColumns[Prop_60]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       name="Prop_60" />
                   </externalMetadataColumns>
                 </output>
@@ -1093,307 +1221,368 @@
                       specialFlags="2" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_0]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_0]"
                       name="Prop_0" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_1]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_1]"
                       name="Prop_1" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_2]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_2]"
                       name="Prop_2" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_3]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_3]"
                       name="Prop_3" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_4]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_4]"
                       name="Prop_4" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_5]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_5]"
                       name="Prop_5" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_6]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_6]"
                       name="Prop_6" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_7]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_7]"
                       name="Prop_7" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_8]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_8]"
                       name="Prop_8" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_9]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_9]"
                       name="Prop_9" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_10]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_10]"
                       name="Prop_10" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_11]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_11]"
                       name="Prop_11" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_12]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_12]"
                       name="Prop_12" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_13]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_13]"
                       name="Prop_13" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_14]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_14]"
                       name="Prop_14" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_15]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_15]"
                       name="Prop_15" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_16]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_16]"
                       name="Prop_16" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_17]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_17]"
                       name="Prop_17" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_18]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_18]"
                       name="Prop_18" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_19]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_19]"
                       name="Prop_19" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_20]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_20]"
                       name="Prop_20" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_21]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_21]"
                       name="Prop_21" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_22]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_22]"
                       name="Prop_22" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_23]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_23]"
                       name="Prop_23" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_24]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_24]"
                       name="Prop_24" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_25]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_25]"
                       name="Prop_25" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_26]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_26]"
                       name="Prop_26" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_27]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_27]"
                       name="Prop_27" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_28]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_28]"
                       name="Prop_28" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_29]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_29]"
                       name="Prop_29" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_30]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_30]"
                       name="Prop_30" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_31]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_31]"
                       name="Prop_31" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_32]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_32]"
                       name="Prop_32" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_33]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_33]"
                       name="Prop_33" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_34]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_34]"
                       name="Prop_34" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_35]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_35]"
                       name="Prop_35" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_36]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_36]"
                       name="Prop_36" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_37]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_37]"
                       name="Prop_37" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_38]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_38]"
                       name="Prop_38" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_39]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_39]"
                       name="Prop_39" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_40]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_40]"
                       name="Prop_40" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_41]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_41]"
                       name="Prop_41" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_42]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_42]"
                       name="Prop_42" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_43]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_43]"
                       name="Prop_43" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_44]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_44]"
                       name="Prop_44" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_45]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_45]"
                       name="Prop_45" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_46]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_46]"
                       name="Prop_46" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_47]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_47]"
                       name="Prop_47" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_48]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_48]"
                       name="Prop_48" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_49]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_49]"
                       name="Prop_49" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_50]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_50]"
                       name="Prop_50" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_51]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_51]"
                       name="Prop_51" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_52]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_52]"
                       name="Prop_52" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_53]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_53]"
                       name="Prop_53" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_54]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_54]"
                       name="Prop_54" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_55]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_55]"
                       name="Prop_55" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_56]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_56]"
                       name="Prop_56" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_57]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_57]"
                       name="Prop_57" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_58]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_58]"
                       name="Prop_58" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_59]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_59]"
                       name="Prop_59" />
                     <outputColumn
                       refId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_60]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="100"
                       lineageId="Package\Data Flow Task\HDFS File Source.Outputs[Error output].Columns[Prop_60]"
                       name="Prop_60" />
                   </outputColumns>
@@ -1470,19 +1659,19 @@
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="129.6,41.6"
           Id="Package\Data Flow Task\Row Count"
           TopLeft="278.857147606052,244.094121070387" />
         <NodeLayout
-          Size="159.2,41.6"
-          Id="Package\Data Flow Task\HDFS File Source"
-          TopLeft="262.857147333573,55.6705890160531" />
-        <NodeLayout
           Size="152.8,41.6"
           Id="Package\Data Flow Task\Derived Column"
           TopLeft="272.000004632133,135.811766610591" />
+        <NodeLayout
+          Size="159.2,41.6"
+          Id="Package\Data Flow Task\HDFS File Source"
+          TopLeft="262.857147333573,55.6705890160531" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Output]"
           TopLeft="345.428575982853,97.2705890160531">
@@ -1524,9 +1713,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,21.5911772298979,16,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

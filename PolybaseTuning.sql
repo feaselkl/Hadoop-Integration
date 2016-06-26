@@ -1,6 +1,6 @@
 --Polybase includes a number of DMVs designed to
 --troubleshoot and performance tune your cross-server operations.
-USE [AdventureworksDW2016CTP3]
+USE [OOTP]
 GO
 
 --Show current nodes enlisted.  You get one head node which is by default

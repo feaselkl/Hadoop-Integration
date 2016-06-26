@@ -5,6 +5,6 @@
   DTS:CreationName="Hadoop">
   <DTS:ObjectData>
     <HadoopConnectionManager
-      ConnectionString="WebHdfsHost=192.168.172.130;WebHdfsPort=50070;WebHdfsUserName=admin;WebHCatHost=;WebHCatPort=50111;WebHCatUser=;EnableWebHdfs=True;EnableWebHCat=False;WebHdfsAuthType=Basic;WebHdfsDomain=;WebHCatAuthType=Basic;WebHCatDomain=;" />
+      ConnectionString="WebHdfsHost=192.168.172.149;WebHdfsPort=50070;WebHdfsUserName=admin;WebHCatHost=;WebHCatPort=50111;WebHCatUser=;EnableWebHdfs=True;EnableWebHCat=False;WebHdfsAuthType=Basic;WebHdfsDomain=;WebHCatAuthType=Basic;WebHCatDomain=;WebHdfsIsHttps=False;WebHCatIsHttps=False;" />
   </DTS:ObjectData>
 </DTS:ConnectionManager>

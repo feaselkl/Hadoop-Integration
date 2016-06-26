@@ -1,4 +1,4 @@
-USE [AdventureworksDW2016CTP3]
+USE [OOTP]
 GO
 --Query the secondbasemen table in Hive via linked server.
 SELECT

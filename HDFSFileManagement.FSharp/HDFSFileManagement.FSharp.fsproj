@@ -58,27 +58,11 @@
     <Compile Include="Program.fs" />
     <None Include="App.config" />
     <Content Include="packages.config" />
-    <None Include="MRLib\MRRunner.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="MRLib\Microsoft.WindowsAzure.Management.Framework.Threading.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="MRLib\Microsoft.Hadoop.ReduceDriver.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="MRLib\Microsoft.Hadoop.MapReduce.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="MRLib\Microsoft.Hadoop.MapDriver.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="MRLib\Microsoft.Hadoop.CombineDriver.exe">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="MRLib\Microsoft.Hadoop.Client.dll">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <None Include="MRLib\Microsoft.Hadoop.CombineDriver.exe" />
+    <None Include="MRLib\Microsoft.Hadoop.MapDriver.exe" />
+    <None Include="MRLib\Microsoft.Hadoop.ReduceDriver.exe" />
+    <None Include="MRLib\Microsoft.WindowsAzure.Management.Framework.Threading.dll" />
+    <None Include="MRLib\MRRunner.exe" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FSharp.Data.SqlClient">

@@ -1,4 +1,4 @@
-USE [AdventureworksDW2016CTP3]
+USE [OOTP]
 GO
 
 /* Example 1:  TOP with JOIN */
@@ -26,10 +26,10 @@ SELECT
 	pl.AgeDesc,
 	pl.Throws,
 	pl.Bats,
-	p.NameStyle
+	tsa.TopSalary
 FROM players pl
-	INNER JOIN AdventureWorks2016CTP3.Person.Person_json p
-		ON pl.Age = p.PersonID
+	INNER JOIN dbo.TopSalaryByAge tsa
+		ON pl.Age = tsa.Age
 ORDER BY
 	LastName DESC;
 
@@ -56,10 +56,10 @@ SELECT
 	pl.AgeDesc,
 	pl.Throws,
 	pl.Bats,
-	p.NameStyle
+	tsa.TopSalary
 FROM players pl
-	INNER JOIN AdventureWorks2016CTP3.Person.Person_json p
-		ON pl.Age = p.PersonID
+	INNER JOIN dbo.TopSalaryByAge tsa
+		ON pl.Age = tsa.Age
 ORDER BY
 	LastName DESC;
 

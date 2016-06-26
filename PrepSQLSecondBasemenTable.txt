@@ -1,7 +1,7 @@
-USE AdventureWorks2016CTP3
+USE OOTP
 GO
-DROP TABLE IF EXISTS Production.SecondBasemen;
-CREATE TABLE Production.SecondBasemen
+DROP TABLE IF EXISTS Player.SecondBasemen;
+CREATE TABLE Player.SecondBasemen
 (
 	FirstName VARCHAR(50),
 	LastName VARCHAR(50),
@@ -10,4 +10,4 @@ CREATE TABLE Production.SecondBasemen
 	Throws VARCHAR(5)
 );
 
-SELECT * from Production.SecondBasemen;
+SELECT * from Player.SecondBasemen;

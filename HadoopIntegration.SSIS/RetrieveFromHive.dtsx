@@ -7,27 +7,34 @@
   DTS:CreatorName="DESKTOP-BFJ1BGV\Kevin Feasel"
   DTS:DTSID="{8EF16A5D-F268-4098-846D-87757EEAF30E}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="13.0.900.80"
+  DTS:LastModifiedProductVersion="13.0.1601.5"
   DTS:LocaleID="1033"
   DTS:ObjectName="RetrieveFromHive"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{6B1104FA-81F9-42C7-B1E8-D0733F07720D}">
+  DTS:ProtectionLevel="2"
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{3DFECE09-1139-4A92-925D-1FFDC6F58DFD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[HDP.admin 1]"
+      DTS:refId="Package.ConnectionManagers[Sandbox.admin]"
       DTS:CreationName="ADO.NET:System.Data.Odbc.OdbcConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-      DTS:DTSID="{D3F01051-7DD5-4362-B1C6-499E0DEEDD00}"
-      DTS:ObjectName="HDP.admin 1">
+      DTS:DTSID="{4A1D873C-2002-497F-BCA4-90D896AD6C85}"
+      DTS:ObjectName="Sandbox.admin">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="uid=admin;Dsn=HDP;">
-          <DTS:Password
-            DTS:Name="pwd"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAz2BXGEwYT0Osz6Ip26/6tQAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADPCgeTfFJxg6K9G3B3/Ej+r7sVMvQN/O990wM91l3HZgAAAAAOgAAAAAIAACAAAADd9fezyhT7x4RJ4SjhtCGXt8xmxVPo6e3xN0aB5sMzr0AAAADLXq731gtAlFDUSDHS3zsH4KDG6ct4HsSo7k4/GjtMGt9dOsli+NiFrStGtq8xIAzxOulGFiOcGV7iWKYmArVFQAAAANSq0U3sxTZCheT328ge/sUq8ydoFwYQojT10bHyiAj8qbDjxKlxybwxceMALsNO6Qw5iRFg2/egOqQddsYMCvU</DTS:Password>
+          DTS:ConnectionString="uid=admin;Dsn=Sandbox;">
+          <EncryptedData
+            Type="http://www.w3.org/2001/04/xmlenc#Element"
+            Salt="QHPUsdcjtw=="
+            IV="xy5kTUwYsLQ=" xmlns="http://www.w3.org/2001/04/xmlenc#">
+            <EncryptionMethod
+              Algorithm="http://www.w3.org/2001/04/xmlenc#tripledes-cbc" />
+            <CipherData>
+              <CipherValue>xy5kTUwYsLQHSxrCTjOdqOpsP8/D16xQBiRiRPaEzDKF/5ayOAjmSPlCryrs1tlF191etsNOh5/mNOvwmRWikYpwDITSiqA0wsppTAjnHj6UVdUmSomyGF9VwLVKDwnto8aQEFgxs8062XUGri66VIy/Eqxy9naOaPcMoWBefiU=</CipherValue>
+            </CipherData>
+          </EncryptedData>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -128,8 +135,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\SecondBasemen.Connections[IDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[HDP.admin 1]"
-                  connectionManagerRefId="Package.ConnectionManagers[HDP.admin 1]"
+                  connectionManagerID="Package.ConnectionManagers[Sandbox.admin]"
+                  connectionManagerRefId="Package.ConnectionManagers[Sandbox.admin]"
                   description="Managed connection manager"
                   name="IDbConnection" />
               </connections>
@@ -140,21 +147,19 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].Columns[firstname]"
-                      dataType="wstr"
+                      dataType="nText"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].ExternalColumns[firstname]"
-                      length="4000"
                       lineageId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].Columns[firstname]"
                       name="firstname"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].Columns[lastname]"
-                      dataType="wstr"
+                      dataType="nText"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].ExternalColumns[lastname]"
-                      length="4000"
                       lineageId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].Columns[lastname]"
                       name="lastname"
                       truncationRowDisposition="FailComponent" />
@@ -169,21 +174,19 @@
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].Columns[bats]"
-                      dataType="wstr"
+                      dataType="nText"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].ExternalColumns[bats]"
-                      length="4000"
                       lineageId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].Columns[bats]"
                       name="bats"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].Columns[throws]"
-                      dataType="wstr"
+                      dataType="nText"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].ExternalColumns[throws]"
-                      length="4000"
                       lineageId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].Columns[throws]"
                       name="throws"
                       truncationRowDisposition="FailComponent" />
@@ -192,13 +195,11 @@
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].ExternalColumns[firstname]"
-                      dataType="wstr"
-                      length="4000"
+                      dataType="nText"
                       name="firstname" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].ExternalColumns[lastname]"
-                      dataType="wstr"
-                      length="4000"
+                      dataType="nText"
                       name="lastname" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].ExternalColumns[age]"
@@ -206,13 +207,11 @@
                       name="age" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].ExternalColumns[bats]"
-                      dataType="wstr"
-                      length="4000"
+                      dataType="nText"
                       name="bats" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Output].ExternalColumns[throws]"
-                      dataType="wstr"
-                      length="4000"
+                      dataType="nText"
                       name="throws" />
                   </externalMetadataColumns>
                 </output>
@@ -223,14 +222,12 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Error Output].Columns[firstname]"
-                      dataType="wstr"
-                      length="4000"
+                      dataType="nText"
                       lineageId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Error Output].Columns[firstname]"
                       name="firstname" />
                     <outputColumn
                       refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Error Output].Columns[lastname]"
-                      dataType="wstr"
-                      length="4000"
+                      dataType="nText"
                       lineageId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Error Output].Columns[lastname]"
                       name="lastname" />
                     <outputColumn
@@ -240,14 +237,12 @@
                       name="age" />
                     <outputColumn
                       refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Error Output].Columns[bats]"
-                      dataType="wstr"
-                      length="4000"
+                      dataType="nText"
                       lineageId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Error Output].Columns[bats]"
                       name="bats" />
                     <outputColumn
                       refId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Error Output].Columns[throws]"
-                      dataType="wstr"
-                      length="4000"
+                      dataType="nText"
                       lineageId="Package\Data Flow Task\SecondBasemen.Outputs[ADO NET Source Error Output].Columns[throws]"
                       name="throws" />
                     <outputColumn

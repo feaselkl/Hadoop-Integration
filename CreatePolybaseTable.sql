@@ -1,9 +1,9 @@
 --Before running this, follow the instructions at:
 -- https://www.mssqltips.com/sqlservertip/4080/introduction-to-polybase-in-sql-server-2016--part-1/
 -- This will configure your SQL Server box for Polybase.
-USE [AdventureworksDW2016CTP3]
+USE [OOTP]
 GO
-CREATE EXTERNAL DATA SOURCE [HDP2] WITH (TYPE = Hadoop, LOCATION = N'hdfs://192.168.172.130:8020')
+CREATE EXTERNAL DATA SOURCE [HDP2] WITH (TYPE = Hadoop, LOCATION = N'hdfs://192.168.172.149:8020')
 GO
 --We're only reading CSVs in this case, so we only need this one file format.
 CREATE EXTERNAL FILE FORMAT [TextFileFormat]

@@ -5,16 +5,16 @@ open FSharp.Data.SqlClient
 
 [<Literal>]
 let connectionString = 
-    @"Data Source=LOCALHOST;Initial Catalog=AdventureWorks2016CTP3;Integrated Security=True"
+    @"Data Source=LOCALHOST;Initial Catalog=OOTP;Integrated Security=True"
 
 type InsertSecondBaseman = 
-    SqlCommandProvider<"INSERT INTO Person.SecondBasemen(FirstName, LastName, Age, Bats, Throws) VALUES(@FirstName, @LastName, @Age, @Bats, @Throws)", connectionString>
+    SqlCommandProvider<"INSERT INTO Player.SecondBasemen(FirstName, LastName, Age, Bats, Throws) VALUES(@FirstName, @LastName, @Age, @Bats, @Throws)", connectionString>
  
 [<EntryPoint>]
 let main argv = 
     //Connect to the cluster.  Replace the URI with your local machine name.
     //This is a sandbox, so there is no password.  Set a password in your real environment, okay?
-    let clusterURI = new Uri("http://192.168.172.130:50070")
+    let clusterURI = new Uri("http://192.168.172.149:50070")
     let cluster = Hadoop.Connect(clusterURI, "admin", null);
 
     //Part 1:  bring a file down
@@ -38,10 +38,10 @@ let main argv =
             )
     tran.Commit()
     conn.Close()
-    printfn "Successfully loaded Person.SecondBasemen."
+    printfn "Successfully loaded Player.SecondBasemen."
     
     //Part 2:  send a file up
-    let hdfsPath = "/tmp/ootp/pitchingratings.csv"
+    let hdfsPath = "/tmp/ootp/PitchingRatings.csv"
     let localPath = "C:\\Temp\\Pitching\\PitchingRatings.csv"
     cluster.StorageSystem.CopyFromLocal(localPath, hdfsPath)
     printfn "%A sent up to %A" localPath hdfsPath    

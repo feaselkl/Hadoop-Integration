@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HDFSFileManagement.FSharp", "HDFSFileManagement.FSharp\HDFSFileManagement.FSharp.fsproj", "{B82A3A67-9B54-43B5-91E9-A89F76FF12B0}"
 EndProject
@@ -40,6 +40,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Files", "Files", "{66EF3FBE-AEA5-43E4-A264-FDF6D9F8CAF8}"
 	ProjectSection(SolutionItems) = preProject
 		Files\BattingRatings.csv = Files\BattingRatings.csv
+		CreateOOTPDatabase.sql = CreateOOTPDatabase.sql
 		Files\PitchingRatings.csv = Files\PitchingRatings.csv
 	EndProjectSection
 EndProject
